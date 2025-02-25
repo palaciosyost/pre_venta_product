@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="product_preventa" inherit_id="website_sale.product">
+        <xpath expr="//div[@id='contact_us_wrapper']" position="before">
+            <!-- Variable oculta para verificar si es preventa -->
+            <span id="is_preventa" t-attf-data-preventa="#{product.fecha_preventa}" class="d-none"></span>
+        </xpath>
+
+        <!-- Modal de advertencia -->
+        <xpath expr="//div" position="inside">
+            <div class="modal fade" id="preventaModal" tabindex="-1" role="dialog" aria-labelledby="preventaModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-warning text-white">
+                            <h5 class="modal-title" id="preventaModalLabel">⚠️ Atención</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>Este producto está en preventa. Inicio de entregas a partir de: <strong id="preventaFecha"></strong></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button"  class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

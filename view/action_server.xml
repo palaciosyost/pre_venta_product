@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data >
+        <!-- Definir la tarea programada -->
+        <record id="ir_cron_mi_fecha_preventa" model="ir.cron">
+            <field name="name">Fechas de preventa</field>
+            <field name="model_id" ref="model_product_template"/> <!-- Modelo correcto -->
+            <field name="state">code</field>
+            <field name="code">model.limpiar_fecha_preventa()</field> <!-- Método corregido -->
+            <field name="interval_number">1</field> <!-- Se ejecuta cada 1 día -->
+            <field name="interval_type">days</field> <!-- Tipo de intervalo: días -->
+            <field name="numbercall">-1</field> <!-- Ejecución infinita -->
+            <field name="active">True</field> <!-- Activar la tarea -->
+        </record>
+    </data>
+</odoo>
