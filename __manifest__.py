@@ -14,6 +14,7 @@
         'view/view_product_template.xml',
         "view/view_purchrse_order.xml",
         "view/web/view_web_product.xml",
+        "view/action_server.xml",
     ],
     'auto_install': False,
     'application': False,
