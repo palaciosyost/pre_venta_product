@@ -11,7 +11,7 @@
             <div class="modal fade" id="preventaModal" tabindex="-1" role="dialog" aria-labelledby="preventaModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <div class="modal-header bg-warning text-white">
+                        <div class="text-white modal-header bg-warning">
                             <h5 class="modal-title" id="preventaModalLabel">⚠️ Atención</h5>
                         </div>
                         <div class="modal-body">
